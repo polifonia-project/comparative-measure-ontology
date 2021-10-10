@@ -1,0 +1,345 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/polifonia/ON/comparative-measures/"
+     xml:base="https://w3id.org/polifonia/ON/comparative-measures/"
+     xmlns:cm="https://w3id.org/polifonia/ON/comparative-measures/"
+     xmlns:mc="https://w3id.org/polifonia/ON/musical-composition/"
+     xmlns:mf="https://w3id.org/polifonia/ON/musical-feature/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ON/comparative-measures/">
+        <rdfs:comment xml:lang="en">In the Comparative Measures module we define patterns describing observations and measures applied to comparative analysis, such as similarities. Currently it expresses the lyric and harmonic similarity between two musical pieces.</rdfs:comment>
+        <rdfs:label xml:lang="en">Comparative Measures</rdfs:label>
+        <owl:versionInfo xml:lang="en">1.0.0 Adding classes and properties</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/hasEncoding -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/hasEncoding">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/isEncodingOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Encoding"/>
+        <rdfs:label xml:lang="en">has encoding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/hasSimilarityFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/hasSimilarityFunction">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/isSimilarityFunctionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/SimilarityFunction"/>
+        <rdfs:label xml:lang="en">has similarity function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isComputationBasisOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isComputationBasisOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/isComputedOn"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:label xml:lang="en">is computation basis of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isComputedOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isComputedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:label xml:lang="en">is computed on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isEncodingOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isEncodingOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Encoding"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:label xml:lang="en">is encoding of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isSimilarToLyricsLine -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isSimilarToLyricsLine">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-composition/LyricsLine"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-composition/LyricsLine"/>
+        <rdfs:label xml:lang="en">is similar to lyrics line</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isSimilarToMusicFeature -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isSimilarToMusicFeature">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:label xml:lang="en">is similar to music feature</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/isSimilarityFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/isSimilarityFunctionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/SimilarityFunction"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:label xml:lang="en">is similarity function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasPart">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/core/isPartOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Part"/>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasTimeInterval -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasTimeInterval">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/core/isTimeIntervalOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/core/TimeInterval"/>
+        <rdfs:label xml:lang="en">has time interval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/isPartOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Part"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/isTimeIntervalOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/isTimeIntervalOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/core/TimeInterval"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+        <rdfs:label xml:lang="en">is time interval of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/lineNumber -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/lineNumber">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-composition/LyricsLine"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:label xml:lang="en">Line number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/value -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measures/value">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">Value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/endTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ON/core/endTime">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">End time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/startTime -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ON/core/startTime">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+        <rdfs:label xml:lang="en">End time</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/Encoding -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/Encoding">
+        <rdfs:label xml:lang="en">Encoding</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/HarmonicSimilarity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/HarmonicSimilarity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/isComputedOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/polifonia/ON/musical-feature/ChordProgression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Harmonica similarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/LyricSimilarity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/LyricSimilarity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Similarity"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/isComputedOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/polifonia/ON/musical-composition/Lyrics"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Lyric similarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/MusicFeature -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature">
+        <rdfs:label xml:lang="en">Music feature</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/Part -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/Part">
+        <rdfs:label xml:lang="en">Part</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/Similarity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/Similarity">
+        <rdfs:label xml:lang="en">Similarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measures/SimilarityFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measures/SimilarityFunction">
+        <rdfs:label xml:lang="en">Similarity function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/TimeInterval -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/TimeInterval">
+        <rdfs:label xml:lang="en">Time interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-composition/Lyrics -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-composition/Lyrics">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:label xml:lang="en">Lyrics</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-composition/LyricsLine -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-composition/LyricsLine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Part"/>
+        <rdfs:label xml:lang="en">Lyrics line</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-feature/Chord -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-feature/Chord">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/Part"/>
+        <rdfs:label xml:lang="en">Chord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-feature/ChordProgression -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-feature/ChordProgression">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measures/MusicFeature"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasPart"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Chord progression</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
