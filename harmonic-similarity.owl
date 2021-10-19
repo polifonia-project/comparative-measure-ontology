@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/polifonia/ON/harmonic-similarity#"
+     xml:base="https://w3id.org/polifonia/ON/harmonic-similarity"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/polifonia/ON/harmonic-similarity">
+        <rdfs:comment xml:lang="en">The Harmonic Similarity module is a specialization of the Comparative Measure module.</rdfs:comment>
+        <rdfs:label xml:lang="en">Harmonic Similarity</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/hasEncoding -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/hasEncoding">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/isEncodingOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/Encoding"/>
+        <rdfs:label xml:lang="en">hasEncoding</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/hasSimilarityFunction -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/hasSimilarityFunction">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/isSimilarityFunctionOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/SimilarityFunction"/>
+        <rdfs:label xml:lang="en">has similarity function</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/isComputedOn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/isComputedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+        <rdfs:label xml:lang="en">is computed on</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/isEncodingOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/isEncodingOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/Encoding"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:label xml:lang="en">is encoding of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/isSimilarityFunctionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/isSimilarityFunctionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/SimilarityFunction"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:label xml:lang="en">is similarity function of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/hasPart">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/core/isPartOf"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">hasPart</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/involves -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/involves">
+        <owl:inverseOf rdf:resource="https://w3id.org/polifonia/ON/core/isInvolvedIn"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">involves</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/isInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/isInvolvedIn">
+        <rdfs:label xml:lang="en">is involved in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/isPartOf">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/core/isRelatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">is related to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/harmonic-similarity/hasSimilarChordProgression -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/harmonic-similarity/hasSimilarChordProgression">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-feature/ChordProgression"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-feature/ChordProgression"/>
+        <rdfs:label xml:lang="en">has similar chord progression</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/similarityValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/similarityValue">
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/Encoding -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measure/Encoding">
+        <rdfs:label xml:lang="en">Encording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/SimilarityFunction -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/comparative-measure/SimilarityFunction">
+        <rdfs:label xml:lang="en">Similarity Function</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/core/Situation -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/core/Situation">
+        <rdfs:label xml:lang="en">Situation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/harmonic-similarity/HarmonicSimilarity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/polifonia/ON/core/Situation"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/comparative-measure/isComputedOn"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/polifonia/ON/musical-feature/ChordProgression"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Harmonic Similarity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-composition/Recording -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-composition/Recording">
+        <rdfs:label xml:lang="en">Recording</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-feature/Chord -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-feature/Chord">
+        <rdfs:label xml:lang="en">Chord</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/polifonia/ON/musical-feature/ChordProgression -->
+
+    <owl:Class rdf:about="https://w3id.org/polifonia/ON/musical-feature/ChordProgression">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/polifonia/ON/core/hasPart"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="https://w3id.org/polifonia/ON/musical-feature/Chord"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="en">Chord Progression</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
