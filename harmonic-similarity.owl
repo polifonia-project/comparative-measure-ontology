@@ -125,6 +125,15 @@
         <rdfs:label xml:lang="en">is related to</rdfs:label>
     </owl:ObjectProperty>
     
+    
+    <!-- https://w3id.org/polifonia/ON/comparative-measure/isHarmonicallySimilarTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/polifonia/ON/comparative-measure/isHarmonicallySimilarTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ReflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/polifonia/ON/musical-composition/Recording"/>
+        <rdfs:range rdf:resource="https://w3id.org/polifonia/ON/musical-composition/Recording"/>
+        <rdfs:label xml:lang="en">is harmonically similar to</rdfs:label>
+    </owl:ObjectProperty>
 
 
     <!-- https://w3id.org/polifonia/ON/harmonic-similarity/hasSimilarChordProgression -->
